@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+div{
+    width: 100px;
+    height: 100px;
+}
+
+.camisetaNegra{
+    display: flex;
+    background-image: url("img/black.png");
+    margin-top: 100px;
+    width: 800px;
+    height: 800px;
+    justify-content: center;
+    margin-left: 550px;
+    color: white;
+}
+
+.camisetaBlanca{
+    display: flex;
+    background-image: url("img/white.png");
+    margin-top: 100px;
+    width: 800px;
+    height: 800px;
+    justify-content: center;
+    margin-left: 550px;
+    color: black;
+}
+
+.letras, .little-img{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-top: 170px;
+    align-items: center;
+    justify-content: center;
+}
+
+.letras{
+    margin-left: 50px;
+}
+
+.big-img{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    margin-top: 400px;
+    margin-left: 40px;
+}
+
+
+.color{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+.imagenes{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 10px;
+}
+
+.titulo{
+    position: absolute;
+    display: flex;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.ejes{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.little-style{
+    width: 70px;
+    height: 70px;
+    transform: scaleX(-1);
+}
+
+#nombre{
+    position: absolute;
+    align-self: flex-end;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 33px;
+    margin-left: 40px;
+    text-align: center;
+    font-size: 50px;
+}
