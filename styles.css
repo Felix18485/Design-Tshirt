@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body{
     margin: 0;
     padding: 0;
     display: flex;
+    font-family: 'Press Start 2P';
 }
 
 
@@ -59,8 +61,8 @@ div{
 
 .color{
     position: absolute;
-    margin-top: 100px;
-    margin-left: 10px;
+    margin-top: 300px;
+    margin-left: 20%;
 }
 
 .imagenes{
@@ -74,13 +76,20 @@ div{
     display: flex;
     height: 20px;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 47%;
+}
+
+#inputTitulo{
+    position: absolute;
+    margin-top: 30px;
+    border-radius: 20px;
+    margin-left: -35px;
 }
 
 .ejes{
     position: absolute;
-    margin-left: 10px;
-    margin-top: 50px;
+    margin-left: 80%;
+    margin-top: 300px;
 }
 
 img{
@@ -103,4 +112,9 @@ img{
     margin-left: 40px;
     text-align: center;
     font-size: 50px;
+    font-family: 'Press Start 2P';
+}
+
+#palabra{
+    font-family: 'Press Start 2P';
 }
