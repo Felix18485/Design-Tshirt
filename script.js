@@ -7,6 +7,9 @@ let radioBlack = document.getElementById("black");
 let radioWhite = document.getElementById("white");
 let divCamisetas = document.getElementById("camisetas");
 let inputTitulo = document.getElementById("inputTitulo");
+let label = document.getElementById("palabra");
+let ejey = document.getElementById("ejey");
+let ejex = document.getElementById("ejex");
 
 
 //Añadimos el evento dragstart para transferir la src al momento
@@ -70,7 +73,6 @@ divImagen.addEventListener("drop", (event) => {
 //imagen de la camiseta que se vera
 radioBlack.addEventListener("click", () => {
     divCamisetas.setAttribute("class", "camisetaNegra");
-    label.setAttribute("class", "letrasBlancas")
 })
 
 radioWhite.addEventListener("click", () => {
@@ -79,9 +81,29 @@ radioWhite.addEventListener("click", () => {
 
 //Se le añade un evento input para que te actualice el valor al instante
 //porque si lo hago con un keydown el ultimo valor no se actualiza
-inputTitulo.addEventListener("input", () => {
-    let label = document.getElementById("palabra");
+inputTitulo.addEventListener("input", (event) => {
+    //Expresion regular que permite cualquier tipo de caracter pero 
+    //solo un maximo de 10 caracteres
+    let regex = /^.{0,10}$/;
+    if (!regex.test(event.target.value)){
+        alert("El titulo no puede tener mas de 10 caracteres");
+        //En el caso de que hay mas de 10 caracteres se elimina el ultimo caracter
+        //y se actualiza el valor del input
+       let inputModificado = event.target.value.substring(0, event.target.value.length - 1);
+        event.target.value = inputModificado;
+    }
+    //Se iguala el valor del label con el del input
     label.textContent = inputTitulo.value;
+})
+
+//Se añade un evento al range ejey para que modifique el marginTop
+ejey.addEventListener("input", () => {
+    label.style.marginTop = ejey.value + "px";
+})
+
+//Se añade un evento al range ejex para que modifique el marginLeft
+ejex.addEventListener("input", () =>{
+    label.style.marginLeft = ejex.value + "px";
 })
 
 
