@@ -11,24 +11,18 @@ let label = document.getElementById("palabra");
 let ejey = document.getElementById("ejey");
 let ejex = document.getElementById("ejex");
 
+//Obtenemos todas las imagenes que hay en el html
+let imagenes = document.querySelectorAll("img");
 
-//Añadimos el evento dragstart para transferir la src al momento
-//de levantar la imagen
-imagenLuffy.addEventListener("dragstart", (event) => {
-    event.dataTransfer.setData("text/plain", event.target.src);
-})
+//Recorremos todas las imagenes y le añadimos el evento
+//dragstart a cada una 
+imagenes.forEach(element => {
+    element.addEventListener("dragstart", (event) => {
+        console.log("iniciando")
+        event.dataTransfer.setData("text/plain", event.target.src);
+    })
+});
 
-imagenChopper.addEventListener("dragstart", (event) => {
-    event.dataTransfer.setData("text/plain", event.target.src);
-})
-
-imagenZoro.addEventListener("dragstart", (event) => {
-    event.dataTransfer.setData("text/plain", event.target.src);
-})
-
-imagenSanji.addEventListener("dragstart", (event) => {
-    event.dataTransfer.setData("text/plain", event.target.src);
-})
 
 divImagen.addEventListener("dragover", (event) => {
     event.preventDefault();
